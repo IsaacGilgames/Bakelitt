@@ -41,17 +41,6 @@ function general(lemez) {
     `
 }
 
-$(function () {
-  var ua = window.navigator.userAgent;
 
-  
-  $('.nicescrool')
-  //.css('position','absolute')
-  //.css('margin-left','140px') // ???
-  .niceScroll({autohidemode:false});
-  
-
-  
-});
 
 
