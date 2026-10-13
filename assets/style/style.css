@@ -215,8 +215,8 @@ main {
 
 
 .card {
-  width: max(250px, 50vw);
-  height: max(250px, 40vw);
+  width: max(350px, 50vw);
+  height: max(350px, 40vw);
   position: absolute;
   /* background: linear-gradient(to right, #200432E6, #4A0730E6); */
   background: linear-gradient(to right, #D8C3A5E6, #F7E7CEE6);
@@ -280,14 +280,14 @@ h2{
   } */
 
   .bakelit-lemez {
-    top: 50%;
+    top: 40%;
     transform: translateY(-25%) translateX(50%);
 
   }
 
   .hangszedo {
     position: absolute;
-    top: 100%;
+    top: 90%;
     right: 0;
     width: var(--d);
     height: 5vh;
