@@ -257,8 +257,16 @@ main {
 
 }
 
-h2{
-  font-size: clamp(12px, 2vw, 20px)
+.card h2 {
+  font-size: clamp(16px, 3.5vw, 24px);
+}
+
+.card h3 {
+  font-size: clamp(14px, 2.8vw, 20px);
+}
+
+.card p {
+  font-size: clamp(11px, 2vw, 15px);
 }
 
 .second-row > p{
