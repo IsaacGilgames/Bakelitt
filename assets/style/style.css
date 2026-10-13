@@ -241,11 +241,11 @@ main {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  flex: 3fr;
   
 }
 
 .second-row{
+  height: 50%;
   overflow-y: auto;  
   overflow-x: hidden;
   white-space: normal;      
@@ -254,7 +254,6 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  flex: 2fr;
 
 }
 
@@ -264,6 +263,10 @@ h2{
 
 .second-row > p{
   margin-bottom: 5px;
+}
+
+.nicescrool {
+  background: url(http://lorempixel.com/100/600/nature/5/);
 }
 
 @media screen and (min-width: 500px) {
