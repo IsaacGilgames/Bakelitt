@@ -1,0 +1,302 @@
+:root {
+  --d: 90vh;
+  --red: #943434;
+  --red-linear: linear-gradient(90deg, rgba(148, 52, 52, 1) 0%, rgba(148, 41, 41, 1) 50%, rgba(222, 69, 69, 1) 100%)
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+}
+
+html,
+body {
+  overflow-x: hidden;
+  width: 100%;
+  height: 100%;
+  background-color: #FAF9F6;
+}
+
+header {
+  background-color: #EAE3D2;
+  width: 100vw;
+  height: 10vh;
+  display: flex;
+  align-items: center;
+}
+
+header .logo {
+  margin: 10px;
+  animation: porges 4s linear infinite;
+  transform-origin: center center;
+}
+
+main {
+  position: relative;
+  height: 90vh;
+  overflow: hidden;
+}
+
+/*Bakelit lemez rész*/
+.bakelit-lemez {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%) translateX(50%);
+  right: 0;
+  width: var(--d);
+  height: var(--d);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.bakelit-lemez>.bakelit {
+  position: absolute;
+  border-radius: 50%;
+}
+
+.bakelit-test {
+  width: var(--d);
+  height: var(--d);
+  /*background-color: #111; Tipikus bakelit fekete */
+  background: #000000;
+  background: linear-gradient(90deg, rgba(0, 0, 0, 1) 0%, rgba(28, 41, 34, 1) 50%, rgba(20, 20, 3, 1) 100%);
+  z-index: 1;
+  animation: porges 4s linear infinite;
+  transform-origin: center center;
+}
+
+.barazda {
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  z-index: 2;
+}
+
+/* A 6 különböző méretű barázda (csökkenő sorrendben) */
+.barazda-1 {
+  width: 90%;
+  height: 90%;
+}
+
+.barazda-2 {
+  width: 80%;
+  height: 80%;
+}
+
+.barazda-3 {
+  width: 70%;
+  height: 70%;
+}
+
+.barazda-4 {
+  width: 60%;
+  height: 60%;
+}
+
+.barazda-5 {
+  width: 50%;
+  height: 50%;
+}
+
+.barazda-6 {
+  width: 40%;
+  height: 40%;
+}
+
+
+.lemez-cimke {
+  width: 30%;
+  height: 30%;
+  background: #943434;
+  background: var(--red-linear);
+  z-index: 3;
+  animation: porges 4s linear infinite;
+  transform-origin: center center;
+}
+
+
+.belso-gyuru {
+  width: 10%;
+  height: 10%;
+  border: 2px solid #fff;
+  z-index: 4;
+}
+
+.kozponti-lyuk {
+  width: 5%;
+  height: 5%;
+  background-color: #f0f0f0;
+  z-index: 5;
+}
+
+@keyframes porges {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/*Hangszedő rész*/
+
+.hangszedo {
+  position: absolute;
+  top: 60%;
+  right: 0;
+  width: var(--d);
+  height: 5vh;
+  transform: translateY(-50%) translateX(50%) rotate(60deg);
+  display: flex;
+  align-items: center;
+}
+
+
+.hagnszedo-test {
+  width: 80%;
+  height: 100%;
+  background: #333333;
+  background: linear-gradient(180deg,
+      #2c2c2c 0%,
+      #666666 25%,
+      #dcdde1 50%,
+      #444444 75%,
+      #1e1e1e 100%);
+  border-radius: 4px;
+}
+
+.fej {
+  width: 20%;
+  height: 300%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hagnszedo-fej {
+  width: 100%;
+  height: 100%;
+  border-radius: 4px 8px 8px 4px;
+  background: #222;
+  background: linear-gradient(135deg,
+      #444444 0%,
+      #2a2a2a 40%,
+      #151515 100%);
+}
+
+
+.lenyil,
+.felnyil {
+  width: 0;
+  height: 0;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.lenyil {
+  border-left: 12px solid transparent;
+  border-right: 12px solid transparent;
+  border-top: 18px solid #ff4757;
+}
+
+.felnyil {
+  border-left: 12px solid transparent;
+  border-right: 12px solid transparent;
+  border-bottom: 18px solid #2ed573;
+}
+
+.lenyil:hover,
+.felnyil:hover {
+  transform: scale(1.2);
+}
+
+
+.card {
+  width: max(250px, 50vw);
+  height: max(250px, 40vw);
+  position: absolute;
+  /* background: linear-gradient(to right, #200432E6, #4A0730E6); */
+  background: linear-gradient(to right, #D8C3A5E6, #F7E7CEE6);
+  /* background-color: #D8C3A5; */
+  z-index: 200;
+  bottom: 20px;
+  left: 20px;
+  border-radius: 10% 10% 0 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.card img {
+  height: 70%;
+}
+
+
+
+
+.first-row {
+  height: 50%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex: 3fr;
+  
+}
+
+.second-row{
+  overflow-y: auto;  
+  overflow-x: hidden;
+  white-space: normal;      
+  overflow-wrap: break-word;
+  word-break: break-word;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 2fr;
+
+}
+
+h2{
+  font-size: clamp(12px, 2vw, 20px)
+}
+
+.second-row > p{
+  margin-bottom: 5px;
+}
+
+@media screen and (min-width: 500px) {
+  :root {
+    --d: 160vh;
+  }
+
+  /* .card {
+    width: 50vw;
+    height: 50vw;
+  } */
+
+  .bakelit-lemez {
+    top: 50%;
+    transform: translateY(-25%) translateX(50%);
+
+  }
+
+  .hangszedo {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: var(--d);
+    height: 5vh;
+    transform: translateY(50%) translateX(50%) rotate(60deg);
+    display: flex;
+    align-items: center;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  /* .card {
+    width: 40vw;
+    height: 40vw;
+  } */
+}
