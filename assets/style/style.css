@@ -231,6 +231,7 @@ main {
 
 .card img {
   height: 70%;
+  padding-right: 10px;
 }
 
 
@@ -238,10 +239,16 @@ main {
 
 .first-row {
   height: 50%;
-  display: flex;
-  justify-content: space-around;
+  display: grid;
   align-items: center;
+  grid-template-columns: 3fr 1fr;
+  grid-template-rows: 100%;
+  gap: 5px
   
+}
+
+.first-row > div{
+  padding-left: 10px;
 }
 
 .second-row{
@@ -258,15 +265,15 @@ main {
 }
 
 .card h2 {
-  font-size: clamp(16px, 3.5vw, 24px);
+  font-size: clamp(16px, 3.5vw, 32px);
 }
 
 .card h3 {
-  font-size: clamp(14px, 2.8vw, 20px);
+  font-size: clamp(14px, 2.8vw, 26px);
 }
 
 .card p {
-  font-size: clamp(11px, 2vw, 15px);
+  font-size: clamp(11px, 2vw, 19px);
 }
 
 .second-row > p{
