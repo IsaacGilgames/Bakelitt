@@ -170,7 +170,7 @@ main {
 
 .fej {
   width: 20%;
-  height: 300%;
+  height: 400%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -197,15 +197,15 @@ main {
 }
 
 .lenyil {
-  border-left: 12px solid transparent;
-  border-right: 12px solid transparent;
-  border-top: 18px solid #ff4757;
+  border-left: 24px solid transparent;
+  border-right: 24px solid transparent;
+  border-top: 36px solid #ff4757;
 }
 
 .felnyil {
-  border-left: 12px solid transparent;
-  border-right: 12px solid transparent;
-  border-bottom: 18px solid #2ed573;
+  border-left: 24px solid transparent;
+  border-right: 24px solid transparent;
+  border-bottom: 36px solid #2ed573;
 }
 
 .lenyil:hover,
